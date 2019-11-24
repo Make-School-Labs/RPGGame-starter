@@ -58,7 +58,7 @@ class ViewController: UIViewController{
     func wizard() {
         let wizard = Wizard(name: "Wizard")
         
-        pushViewController(player: wizard, type: PlayerType.Wizard)
+        pushViewController(player: wizard)
     }
     
     func priest() {
@@ -72,37 +72,24 @@ class ViewController: UIViewController{
     
     func fighter() {
         let fighter = Fighter(name: "Fighter", battleCry: "Arrr!")
-        // TODO: Use the pushViewController function to pass the priest          through the navigation controller
+        // TODO: Use the pushViewController function to pass the fighter          through the navigation controller
         
     }
     
     func elf() {
         let elf = Elf(name: "Elf")
-        // TODO: Use the pushViewController function to pass the priest          through the navigation controller
-        
+        // TODO: Use the pushViewController function to pass the elf          through the navigation controller
     }
     
-    func pushViewController(player: Player, type: PlayerType) {
+    func pushViewController(player: Player) {
         // Creates a viewcontroller from a storyboard file
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "CharacterVC") as! PlayerViewController
-        // Set up properties of view controller to push
+        // Pass the player object to the view controller
         controller.player = player
-        controller.type = type
-        controller.title = player.name
-        controller.view.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-    
         // Push view controller!
         self.navigationController?.pushViewController(controller, animated: true)
     }
-}
-
-
-enum PlayerType {
-    case Priest
-    case Elf
-    case Wizard
-    case Figther
 }
 
 // MARK: Player classes & Protocols

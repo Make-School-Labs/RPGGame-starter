@@ -12,8 +12,6 @@ import UIKit
 class PlayerViewController: UIViewController{
     /// The player object
     var player: Player?
-    /// Type of player
-    var type: PlayerType?
     /// Action label
     @IBOutlet var topLabel: UILabel!
     /// Action button
@@ -27,18 +25,20 @@ class PlayerViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Navigation Controller title
+        self.title = player?.name
+        
+        self.view.backgroundColor = .green
         topLabel.textColor = .white
-        // When button is touched trigger the doPlayerAction function is called
+        
+        // When button is touched trigger the doPlayerAction() function is called
         button.addTarget(self, action: #selector(doPlayerAction), for: .touchUpInside)
     }
     
-    // Changes the topLabel based on what playerType is passed
+    // TODO: Changes the topLabel based on what the player object is
     @objc func doPlayerAction() {
-        // Check if player type can casts only a spell
-        if(type == PlayerType.Wizard || type == PlayerType.Priest) {
-            topLabel.text = "\(player!.name) casts spell"
-        }
-        //TODO: Check for Fighter and Elf types.                          Update text based on if the playerType casts a spell or fights
+        // Hint - Try using a switch case to determine what the player object is!
+        
     }
     
     
