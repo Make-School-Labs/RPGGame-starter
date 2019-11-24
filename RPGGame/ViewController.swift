@@ -79,6 +79,7 @@ class ViewController: UIViewController{
     func elf() {
         let elf = Elf(name: "Elf")
         // TODO: Use the pushViewController function to pass the elf          through the navigation controller
+        
     }
     
     func pushViewController(player: Player) {
