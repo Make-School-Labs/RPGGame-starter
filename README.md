@@ -26,6 +26,8 @@ Below are the files in the project you will need to edit in order to implement t
 - `ViewController.swift`
 - `PlayerViewController.swift`
 
+**Follow the TODO instructions in each file in order to implement the desired functionality!**
+
 ## Resources
 
 - [MOB 1.1 lesson on Navigation Basics](https://make-school-courses.github.io/MOB-1.1-Introduction-to-Swift/#/Lessons/12-Basic-Navigation/README)
