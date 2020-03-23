@@ -64,7 +64,7 @@ class ViewController: UIViewController{
     func priest() {
         
         let priest = Priest(name: "Priest")
-        // TODO: Use the pushViewController function to pass the priest          through the navigation controller
+        // TODO: Use the pushViewController function to pass the priest through the navigation controller
         
         // Hint - Look at how the wizard class does it!
         
@@ -72,13 +72,13 @@ class ViewController: UIViewController{
     
     func fighter() {
         let fighter = Fighter(name: "Fighter", battleCry: "Arrr!")
-        // TODO: Use the pushViewController function to pass the fighter          through the navigation controller
+        // TODO: Use the pushViewController function to pass the fighter through the navigation controller
         
     }
     
     func elf() {
         let elf = Elf(name: "Elf")
-        // TODO: Use the pushViewController function to pass the elf          through the navigation controller
+        // TODO: Use the pushViewController function to pass the elf through the navigation controller
         
     }
     
@@ -92,6 +92,9 @@ class ViewController: UIViewController{
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
+
+// TODO: Create a PlayerType enum, with a case statement
+// for each of the following: Priest, Elf, Wizard, Fighter
 
 // MARK: Player classes & Protocols
 protocol Casts {
